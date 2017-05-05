@@ -30,3 +30,7 @@ plot(x, y_1,'r')
 figure
 printf('Polynom in Horner Schreibweise: ')
 plot(x, y_2)
+
+
+% Beobachtung: Das Horner-Schema liefert ein sehr schlechtes Resultat
+% Das normale Verfahren liefert einen besseren Plot, der plausibel erscheint
