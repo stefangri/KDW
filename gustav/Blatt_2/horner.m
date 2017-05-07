@@ -1,11 +1,10 @@
 function y = horner(x, coeff)
 
-  %innerste Klammer
-  y = coeff(1) .*x + coeff(2);
+  %erster Term
+  y = coeff(1);
 
   %horner schema
-  for i = coeff(3 : end)
+  for i = coeff(2 : end)
     y = y .*x + i;
   end
-
 end
