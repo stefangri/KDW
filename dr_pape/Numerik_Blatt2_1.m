@@ -6,7 +6,7 @@ function approx_e = Approx_1(x, n)
   printf('Aufgabenteil a: ')
   buffer = zeros(n);
   for i = 1:n
-    buffer(i) = x^i/factorial(i);
+    buffer(i) = x^i/factorial(i); % Nach der gebenen Approximationsformel
   end
   e = sum(sum(buffer))
 end
@@ -37,5 +37,7 @@ for lauf = 5:5:35
   Approx_3(-7,lauf)
   printf('\n')
 end
+
+% Vergleich mit der eulerschen Zahl
 
 exp(-7)
