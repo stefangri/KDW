@@ -41,3 +41,8 @@ for lauf = 0:5:35
   printf('\n')
 end
 1/exp(7)
+
+%Kommentare
+% Die Summe ist eine Taylorreihe der exp-Funktion, um die Stelle x=0, je größer die Abweichung des eingesetzen Wertes von x=0, desto schlechter
+%Ergebnis. Der Unterschied zwischen Teil a und b liegt an dem alternierenden Vorzeichen der (-7). Da bei Teilb lediglich einmal geteilt werden entstehet
+% ein kleinerer Rundungsfehler
