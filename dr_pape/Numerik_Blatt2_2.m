@@ -39,4 +39,6 @@ plot(x, y_2)
 
 % Beobachtung: Das Horner-Schema liefert ein sehr schlechtes Resultat
 % Es treten offenbar Rundungsfehler, hervorgerufen durch Rechenoperationen auf
+% Horner Schema: 8 Additionen bzw. Subtraktionen + 8 Multiplikationen pro y-Wert
+% Normale Funktion: 1 Subtraktion + 8 Multiplikation pro y-Wert
 % Das normale Verfahren liefert einen besseren Plot, der plausibel erscheint
