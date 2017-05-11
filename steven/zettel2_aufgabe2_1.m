@@ -1,6 +1,7 @@
 format long
-%syms k
 
+
+%Aufgabenteil a
 function exp = myexp (x,n)
   liste=[];
   printf('In der Funktion')
@@ -10,7 +11,7 @@ function exp = myexp (x,n)
   end
   s=sum(liste)
 end
-
+%Aufgabenteil b
 function exp = myexp2 (x,n)
   liste=[];
   printf('In der Funktion')
@@ -21,6 +22,7 @@ function exp = myexp2 (x,n)
   s=1/sum(liste)
 end
 
+%Aufgabenteil c
 function exp = myexp3 (x,n)
   liste=[];
   printf('In der Funktion')
@@ -31,7 +33,7 @@ function exp = myexp3 (x,n)
   s=(sum(liste))^x
 end
 
-myexp(-7,2)
+%Durchlauf
 for lauf = 0:5:35
   printf("Durchlauf Nummer")
   lauf
@@ -40,7 +42,10 @@ for lauf = 0:5:35
   myexp3(7,lauf)
   printf('\n')
 end
-1/exp(7)
+
+%Referenzwert
+exp(-7)
+
 
 %Kommentare
 % Die Summe ist eine Taylorreihe der exp-Funktion, um die Stelle x=0, je größer die Abweichung des eingesetzen Wertes von x=0, desto schlechter
