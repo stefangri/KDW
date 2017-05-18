@@ -30,8 +30,8 @@ for n = [7, 12, 17]
   
   plot(x_exakt, y_exakt, 'b-')
   hold on;
-  plot(x_1, Newton_Basispolynome(x_1, x_1) * myNewtonInterpol(x_1, y_1), 'g-')
+  plot(x_exakt, Newton_Basispolynome(x_exakt, x_1) * myNewtonInterpol(x_1, y_1), 'g-')
   hold on;
-  plot(x_2, myNewtonInterpol(x_2, y_2), 'k-')
+  plot(x_exakt, Newton_Basispolynome(x_exakt, x_2) * myNewtonInterpol(x_2, y_2), 'k-')
   hold on;
 end
