@@ -1,10 +1,10 @@
 for n = [7, 12, 17]
   x_1 = sum(zeros(n)); % Erzeugen von einem Array in dem die äquidistanten Stützstellen gespeichert werden
   y_1 = sum(zeros(n));
-  N_k_1 = sum(ones(n));
+  N_k_1 = 0;
   x_2 = sum(zeros(n)); % Erzeugen eines Arrays in dem die Tscherbyscheff-Knoten gespeichert werden
   y_2 = sum(zeros(n));
-  N_k_2 = sum(ones(n));
+  N_k_2 = 0;
   x_exakt = -1:0.01:1;
   y_exakt = sum(zeros(n));
   
@@ -28,10 +28,17 @@ for n = [7, 12, 17]
 
   end
   
+  for i = 1:length(x_exakt)
+  
+    N_k_1 += Newton_Basispolynome(x_exakt(i), x_1);
+    N_k_2 += Newton_Basispolynome(x_exakt(i), x_2);
+  
+  end
+  
   plot(x_exakt, y_exakt, 'b-')
   hold on;
-  plot(x_exakt, Newton_Basispolynome(x_exakt, x_1) * myNewtonInterpol(x_1, y_1), 'g-')
+  plot(x_exakt, N_k_1 * myNewtonInterpol(x_1, y_1), 'g-')
   hold on;
-  plot(x_exakt, Newton_Basispolynome(x_exakt, x_2) * myNewtonInterpol(x_2, y_2), 'k-')
+  plot(x_exakt, N_k_2 * myNewtonInterpol(x_2, y_2), 'k-')
   hold on;
 end
