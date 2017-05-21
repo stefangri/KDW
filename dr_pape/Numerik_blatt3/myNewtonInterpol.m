@@ -1,9 +1,9 @@
-function p = myNewtonInterpol(x, y)
-  p = sum(zeros(length(x)));
-  n = length(x);
-  for l = 1:n
-    for k = 1:(n - l)
-    p(l) = (y(k + l) - y(k + l -1)) / (x(k + l) - x(k)) % dividierte Differenzen
+function [p] = myNewtonInterpol(x, y)
+  p(:,1) = y;
+  for l = 2:1:length(x)
+    for k = 1:1:length(x) - l + 1
+      p(k, l) = ( p(k + 1, l - 1) - p(k, l - 1) ) / (x(k + l-1) - x(k)  );
     end
   end
+  p = p(1,:);
  end
