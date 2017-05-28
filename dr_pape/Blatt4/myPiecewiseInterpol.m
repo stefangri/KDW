@@ -1,0 +1,1 @@
+function [yEval]=myPiecewiseInterpol(x,f,xEval)
