@@ -60,4 +60,21 @@
   ylabel('y');
   print(['PA2-1-N' num2str(n) '.fig']);
   
+  for j = 0:100
+  
+    delta(j + 1) = -1 + 2 * j / 100;
+  
+  end
+  
+  for i = 1:length(delta)
+  
+    p_1_err(i) = abs(Interpol(x_1, c_1, delta(i)) - f(delta(i))); 
+    p_2_err(i) = abs(Interpol(x_2, c_2, delta(i)) - f(delta(i)));
+  
+  end
+  
+  max(p_1_err)
+  max(p_2_err)
+  
+  
  end
