@@ -1,3 +1,4 @@
+ #for n = [2, 4, 8, 12]
  for n = [7, 12, 17]
  
   x_1 = sum(zeros(n)); % Erzeugen von einem Array in dem die äquidistanten Stützstellen gespeichert werden
@@ -8,17 +9,17 @@
   p_1 = sum(zeros(length(x)));
   p_2 = sum(zeros(length(x)));
  
-   for i = 1:n
+   for i = 0:n
     
-    x_1(i) = -1 + 2 * (i - 1) / n; % Erzeugen äquidistanter Stützstellen
-    y_1(i) = f(x_1(i));
+    x_1(i + 1) = -1 + 2 * (i) / n; % Erzeugen äquidistanter Stützstellen
+    y_1(i + 1) = f(x_1(i + 1));
 
    end
  
-   for i = 1:n
+   for i = 0:n
     
-    x_2(i) = cos((2 * i + 1) * pi / (2 * n + 2)); % Formel der Tscherbyscheff-Knoten
-    y_2(i) = f(x_2(i));
+    x_2(i + 1) = cos((2 * i) * pi / (2 * n + 2)); % Formel der Tscherbyscheff-Knoten
+    y_2(i + 1) = f(x_2(i + 1));
   
    end
   
@@ -58,7 +59,7 @@
   title(['Interpolation mit N = ' num2str(n)]);
   xlabel('x');
   ylabel('y');
-  print(['PA2-1-N' num2str(n) '.fig']);
+  #print(['PA2-1-N' num2str(n) '.fig']);
   
   for j = 0:100
   

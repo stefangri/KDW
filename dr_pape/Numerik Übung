@@ -1,0 +1,26 @@
+funktion definieren
+z.B. f = @(x) x.**3
+Numerisch Integrieren
+quad(@(x) f(x), -1,1) intigirert von -1 bis 1
+
+Zeit der Berechnung tic an den Anfang des Codes und toc am Ende des Codes
+
+Histogram mit bar(x,y)
+
+3D plot x-Achse, y_Achse, [X,Y] = meshgrid(x,y) <- Käsekästchenmuster
+z = 10 * sqrt(X.2 + Y.2)
+surf(x, y, Z)
+
+colormap(hot) macht die farbe des plots nach unten hin dunkler
+
+konturplot mit ezcontour 
+
+ezplot schreibt automatisch den titel, dafür keine Anpassung möglich 
+
+#### Farben
+  #1       red
+  #2       green
+  #3       blue
+  #4       magenta
+  #5       cyan
+  #6       brown 

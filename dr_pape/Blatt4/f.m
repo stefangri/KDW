@@ -8,3 +8,6 @@ function y=f(a, x)
 
   y = transpose(y)
 end
+
+
+### funktion definieren f = @(x) x.**3
