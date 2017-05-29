@@ -51,7 +51,7 @@ for n = [2, 4, 8, 16, 32, 64, 128]
     fig = figure('visible', 'on');
     plot(x, y_runge, 'g-');
     hold on;
-    plot(x, p_1, 'r-');
+    #plot(x, p_1, 'r-');
     hold on;
     plot(x, lin_runge, 'b-');
     plot(x_S_h, y_lin_runge, 'b*')
@@ -65,7 +65,7 @@ for n = [2, 4, 8, 16, 32, 64, 128]
     fig = figure('visible', 'on');
     plot(x, y_e, 'g-');
     hold on;
-    plot(x, p_2, 'r-');
+    #plot(x, p_2, 'r-');
     hold on;
     plot(x, lin_e, 'b-');
     plot(x_S_h, y_lin_e, 'b*')
