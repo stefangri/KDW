@@ -3,7 +3,7 @@
 ### Die Interpolationsverfahren werden anhand des absoluten Fehlers miteinander
 ### verglichen.
 
-
+tic
 for n = [2, 4, 8, 16, 32, 64, 128]
   
   # nahezu exaktes x Intervall
@@ -89,7 +89,7 @@ for n = [2, 4, 8, 16, 32, 64, 128]
     printf(': ')    
     max(lin_e_err)
     
-    ### Ende Newton
+    ### Ende Newton Interpolation
   
     ### Plotten
     fig = figure('visible', 'off');
@@ -103,7 +103,7 @@ for n = [2, 4, 8, 16, 32, 64, 128]
     title(['Interpolation mit N = ' num2str(n)]);
     xlabel('x');
     ylabel('y');
-    print(['plots/runge-N-' num2str(n) '.pdf']);  ## Speichern der Plots in einem Ordner
+    print(['runge-N-' num2str(n) '.pdf']);  ## Speichern der Plots
   
     
     fig = figure('visible', 'off');
@@ -117,7 +117,7 @@ for n = [2, 4, 8, 16, 32, 64, 128]
     title(['Interpolation mit N = ' num2str(n)]);
     xlabel('x');
     ylabel('y');
-    print(['plots/e_Fkt-N-' num2str(n) '.pdf']) ## Speichern der Plots in einem Ordner 
+    print(['e_Fkt-N-' num2str(n) '.pdf']) ## Speichern der Plots
    
    ### Nur noch lineare Interpolation ab n > 16
    else
@@ -149,8 +149,8 @@ for n = [2, 4, 8, 16, 32, 64, 128]
     title(['Interpolation mit N = ' num2str(n)]);
     xlabel('x');
     ylabel('y');
-    print(['plots/runge-N-' num2str(n) '.pdf']); ## Speichern der Plots in einem Ordner
-  
+    print(['runge-N-' num2str(n) '.pdf']); ## Speichern der Plots
+    
   
     fig = figure('visible', 'off');
     plot(x, y_e, 'g-');
@@ -161,12 +161,12 @@ for n = [2, 4, 8, 16, 32, 64, 128]
     title(['Interpolation mit N = ' num2str(n)]);
     xlabel('x');
     ylabel('y');
-    print(['plots/e_Fkt-N-' num2str(n) '.pdf']); ## Speichern der Plots in einem Ordner
+    print(['e_Fkt-N-' num2str(n) '.pdf']); ## Speichern der Plots
   end
   
 end
 
-
+toc
 ######## Beobachtungen ########
 
 # Die Exp. Funktion wird durch die polynomielle Interpolation besser approximiert,
