@@ -92,7 +92,7 @@ for n = [2, 4, 8, 16, 32, 64, 128]
     ### Ende Newton Interpolation
   
     ### Plotten
-    fig = figure('visible', 'off');
+    fig = figure('visible', 'on');
     plot(x, y_runge, 'g-');
     hold on;
     plot(x, p_1, 'r-');
@@ -106,7 +106,7 @@ for n = [2, 4, 8, 16, 32, 64, 128]
     print(['runge-N-' num2str(n) '.pdf']);  ## Speichern der Plots
   
     
-    fig = figure('visible', 'off');
+    fig = figure('visible', 'on');
     plot(x, y_e, 'g-');
     hold on;
     plot(x, p_2, 'r-');
@@ -140,7 +140,7 @@ for n = [2, 4, 8, 16, 32, 64, 128]
   
   
     ### Plotten
-    fig = figure('visible', 'off');
+    fig = figure('visible', 'on');
     plot(x, y_runge, 'g-');
     hold on;
     plot(x, lin_runge, 'b-');
@@ -152,7 +152,7 @@ for n = [2, 4, 8, 16, 32, 64, 128]
     print(['runge-N-' num2str(n) '.pdf']); ## Speichern der Plots
     
   
-    fig = figure('visible', 'off');
+    fig = figure('visible', 'on');
     plot(x, y_e, 'g-');
     hold on;
     plot(x, lin_e, 'b-');
