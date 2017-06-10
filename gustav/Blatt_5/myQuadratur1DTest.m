@@ -22,12 +22,12 @@ function [c] = aequi_stuetz(I, n)
 
 end
 
-
+%INTERVALL
 I = [0.5 1];
 h = I(end) - I(1);
 
 %TEST DER METHODE MIT DEN DREI QUADRATUREN AUS 5.1
-TRAPEZ = myQuadratur1D(@test_function, [h/4 h/4], aequi_stuetz(I, 2))
+TRAPEZ = myQuadratur1D(@test_function, [h/2 h/2], aequi_stuetz(I, 2))
 SIMPSON = myQuadratur1D(@test_function, [h/6 4*h/6 h/6], aequi_stuetz(I, 3))
 NEWTON = myQuadratur1D(@test_function, [h/8 3*h/8 3*h/8 h/8], aequi_stuetz(I, 4))
 exact = 1
