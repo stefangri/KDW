@@ -4,15 +4,22 @@
 
 f = @(x) (1 ./ x.^2); # x Elemtent von (0.5, 1)
 
+# Funktion als function_handle
+
 ### Intervalllänge ###
 
 h = 0.5;
+
+### Intervallgrenzen ###
+
+a = 0.5;
+b = 1;
 
 ### Trapez-Regel ###
 
 # Stützstellen
 
-x_trapez = 0.5:0.5:1;
+x_trapez = a:0.5:b;
 
 # Gewichte
 
@@ -26,7 +33,7 @@ trapez_int = myQuadratur1D(f, w_trapez, x_trapez)
 
 # Stützstellen
 
-x_simpson = 0.5:1 / 4:1;
+x_simpson = a:1 / 4:b;
 
 # Gewichte
 
@@ -40,7 +47,7 @@ simpson_int = myQuadratur1D(f, w_simpson, x_simpson)
 
 # Stützstellen
 
-x_newton = 0.5:1 / 6:1;
+x_newton = a:1 / 6:b;
 
 # Gewichte
 
