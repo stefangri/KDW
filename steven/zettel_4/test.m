@@ -1,9 +1,10 @@
+tic
 x=[0 1 2 ];
 y=exp(x);
-x_inter= 0:0.5:2
+x_inter= 0:0.05:2
 pwinterpol(x,y,x_inter)
 
-x_def= -1:1e-2:1; %Definitionsbereich
+x_def= -1:1e-4:1; %Definitionsbereich
 y_exp=exp(x_def); %Funktion exp
 y_runge=runge(x_def); %Funktion Runge
 
@@ -13,7 +14,7 @@ for i=1:7
   zweier_potenz(i)=2^(i);
 end
 
-for n = zweier_potenz
+for n = 16%zweier_potenz
     stuetz=[];
     for i = 0: n
       stuetz(i+1)=-1+(2*i)/n;
