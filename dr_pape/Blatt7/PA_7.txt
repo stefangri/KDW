@@ -1,0 +1,10 @@
+In der Aufgabe soll ein Gleichungssystem der Form Ax = b mit Hilfe
+der Linearfaktorzerlegung berechnet werden.
+
+In Aufgabenteil c.) ist zu beobachten, dass das Residuum mit wachsendem
+Rang der Matrix A ebenfalls anwächst. Dies ist über die ebenfalls wachsende
+Anzahl der Rechnenoperationen zu begründen. Mit jeder weiteren Rechnenoperation
+summieren sich numerische Rundungsfehler auf. Das Verfahren könnte über
+Pivotisierung numerisch stabiler programmiert werden. 
+
+Fazit: Das Verfahren wird mit wachsendem Rang der Matrix A numerisch instabil.
