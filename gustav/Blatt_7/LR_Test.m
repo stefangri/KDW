@@ -8,6 +8,9 @@
 #y = forward_solve(LR, b);
 #x = backward_solve(LR, y)
 #A * x
+
+
+
 function LR_Test()
 for n = [10:5:25]
 
@@ -19,7 +22,8 @@ V = vander(x);
 LR = LR_decompose(V);
 y = forward_solve(LR, b);
 solution = backward_solve(LR, y);
-err = norm(V*x - b)
+n
+err = norm(V*x - b, 2)
 
 end
 end
