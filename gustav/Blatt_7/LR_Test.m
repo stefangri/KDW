@@ -20,10 +20,11 @@ function LR_Test()
     y = forward_solve(LR, b);
 
     %LÖSUNG DER GLEICHUNG LX = Y
-    solution = backward_solve(LR, y);
+    solution = backward_solve(LR, y)
     n
     % AUSGABE DES FEHLERS
     err = norm(V*x - b, 2)
+    %R = sqrt(sum ((V .* x .- b).**2) )
 
   end
 
