@@ -1,10 +1,18 @@
 In der Aufgabe soll ein Gleichungssystem der Form Ax = b mit Hilfe
-der Linearfaktorzerlegung berechnet werden.
+der Linearfaktorzerlegung berechnet werden. Es wurde für A die Vandermode-Matrix
+V mit äquidistanten Stützstellen verwendet.
+
 
 In Aufgabenteil c.) ist zu beobachten, dass das Residuum mit wachsendem
-Rang der Matrix A ebenfalls anwächst. Dies ist über die ebenfalls wachsende
+Rang der Matrix V ebenfalls anwächst. Dies ist über die ebenfalls wachsende
 Anzahl der Rechnenoperationen zu begründen. Mit jeder weiteren Rechnenoperation
-summieren sich numerische Rundungsfehler auf. Das Verfahren könnte über
-Pivotisierung numerisch stabiler programmiert werden. 
+summieren sich numerische Rundungsfehler auf. Vorallem die Zeilen mit vielen Einträgen
+ungleich ungefähr Null (zB. erste und zweite Zeile der Matrix V) weisen bei erhöhtem Rang
+einen großen Fehler auf.
+Das Verfahren könnte über Pivotisierung und Äquilibrierung numerisch
+stabiler programmiert werden.
 
-Fazit: Das Verfahren wird mit wachsendem Rang der Matrix A numerisch instabil.
+Fazit: Das Verfahren wird mit wachsendem Rang der Matrix V numerisch instabil.
+       Vorallem für Matrizen mit vielen Einträgen ungleich ungefähr Null wachsen die Fehler
+       schneller, weil mehr Rundungsfehler auftreten.       
+       

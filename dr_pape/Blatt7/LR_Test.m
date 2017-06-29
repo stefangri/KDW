@@ -13,6 +13,7 @@ function LR_Test()
     
     x = ((n - 1):-1:0) / n;
     V = vander(x);
+    
     ### Berechnung der rechnten Seite ###
     
     if (n / 2  - floor(n / 2)) == 0;
@@ -27,17 +28,16 @@ function LR_Test()
     
     ### Testen der Sktipte zur LR-Zerlegung ###
     ### Lösen von L * R * x = L * y = b ###
-  
+    
     LR = LR_decompose(V);
     y  = forward_solve(LR, b);
     printf('Lösungsvektor: ')
-    x  = backward_solve(LR, y)
-    
+    x  = transpose(backward_solve(LR, y))
+        
     ### Residuum ###
     
-    Residuum = sqrt(sum((V * transpose(x) - b).**2))
-  
-
+    Residuum = sqrt(sum(abs(V * x - b).**2))
+    
   end
-
+  
 end
