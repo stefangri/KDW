@@ -19,7 +19,7 @@ function [x, e, v] = mybisect(f, a, b)
   n = 2;
   
   while(abs(x(n) - x(n - 1)) > 10**(-12))
-  
+    
     v(n) = f(x(n));
     e(n) = abs(x(n) - x(n - 1));
     
@@ -33,7 +33,7 @@ function [x, e, v] = mybisect(f, a, b)
     end
     
     n += 1;
-    x(n) = 1 / 2 * (a + b);
+    x(n) = 1 / 2 * (a + b);    
     
     if n == 9999
       printf('n > 9999, Abbruch!')
@@ -42,5 +42,7 @@ function [x, e, v] = mybisect(f, a, b)
     
   end
  
+   v(n) = f(x(n));
+   e(n) = abs(x(n) - x(n - 1));
   
 end

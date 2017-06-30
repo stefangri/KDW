@@ -13,7 +13,6 @@ function [x, e, v] = myNewton(f, df, x0)
   x(1) = x0;
   x(2) = x(1) - f(x(1)) / df(x(1));
   v(1) = f(x(1));
-  e(1) = abs(x(1) - x(2));
   
   n = 2;
   
@@ -21,15 +20,19 @@ function [x, e, v] = myNewton(f, df, x0)
     
     v(n) = f(x(n));
     e(n - 1) = abs(x(n) - x(n - 1));  
-    x(n + 1) = x(n) - f(x(n)) / df(x(n));
+    #x(n + 1) = x(n) - f(x(n)) / df(x(n));
   
     n += 1;
+    x(n) = x(n - 1) - f(x(n - 1)) / df(x(n - 1));
   
     if n == 50
       printf('n > 50. Abbruch des Verfahrens.')
       break
     end
-  
+    
   end
+  
+  v(n) = f(x(n));
+  e(n - 1) = abs(x(n) - x(n-1));
 
 end
