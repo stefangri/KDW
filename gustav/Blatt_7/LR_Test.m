@@ -11,7 +11,7 @@ function LR_Test()
     b(ceil(n/2):n) = 2;
 
     %VANDERMONDE-MATRIX
-    V = vander(x);
+    V = vander(x)
 
     %AUFRUF DER METHODE ZU BESTIMMUNG DER LR ZERLEGUNG
     LR = LR_decompose(V);
@@ -20,11 +20,12 @@ function LR_Test()
     y = forward_solve(LR, b);
 
     %LÖSUNG DER GLEICHUNG LX = Y
-    solution = backward_solve(LR, y)
+    solution = backward_solve(LR, y);
     n
+
+
     % AUSGABE DES FEHLERS
-    err = norm(V*x - b, 2)
-    %R = sqrt(sum ((V .* x .- b).**2) )
+    err = norm(V * solution - transpose(b))
 
   end
 
