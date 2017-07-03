@@ -1,5 +1,6 @@
 ### Testskript ###
 
+format long
 
 f = @(x) (cos(2 * x)**2 - x**2);
 
@@ -22,7 +23,7 @@ semilogy(1:1:5, err_newton, 'k*');
 legend ('Bisektionsverfahren', 'Newton-Verfahren');
 xlabel('Anzahl der Iterationsschritte n');
 ylabel('|x_n - x_{n-1}|');
-print(['PA8.3.fig']);
+#print(['PA8.3.pdf']); # Abspeichern der Grafik
 
 
 ### Bermerkungen ###

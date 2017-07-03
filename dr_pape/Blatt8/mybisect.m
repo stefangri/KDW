@@ -35,7 +35,7 @@ function [x, e, v] = mybisect(f, a, b)
     n += 1;
     x(n) = 1 / 2 * (a + b);    
     
-    if n == 9999
+    if n >= 9999
       printf('n > 9999, Abbruch!')
      break
     end
