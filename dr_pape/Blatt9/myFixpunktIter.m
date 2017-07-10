@@ -5,11 +5,11 @@ format long
 g = @(x) (1 / 6 * x**3 + 1 / 3 * x**2 + 1 / 6);
 
 ### Gesucht ist der Fixpunkt von g ###
-### N = 6 aus Aufgabenteil c.), aber x_0 entspricht x(1) somit ist n = 7 ###
+### N = 8 aus Aufgabenteil c.), aber x_0 entspricht x(1) somit ist n = 9 ###
 
 x(1) = 0;
 
-for n = [2:1:7]
+for n = [2:1:9]
 
   x(n) = g(x(n - 1));
   err(n - 1) = abs(x(n) - x(n - 1));

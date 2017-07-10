@@ -14,7 +14,7 @@ b = 0.75;
 
 [x_newton, err_newton, v_newton] = myNewton(f, df, 0.75)
 
-
+### Plot ###
 
 fig = figure('visible', 'on');
 semilogy(1:1:40, err_bisec, 'b*');
