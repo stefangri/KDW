@@ -22,7 +22,7 @@ figure_1=figure;
 hold on
 %xlim([-1.0 1.0])
 %ylim([-4.4 1.1])
-semilogy(n_int(2:end),fehl_nint,'gx');
+semilogy(n_int(2:end),fehl_nint,'bx');
 semilogy(n_newton,fehl_newton,'rx');
 hold off
 
