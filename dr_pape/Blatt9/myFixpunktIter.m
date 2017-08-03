@@ -22,5 +22,5 @@ x
 printf('Fehler |x_n - x_{n-1}|:')
 err
 
-### Anhand des Fehlers ist deutlich, dass das Verfahren gegen den
+### Anhand des Fehlers wird deutlich, dass das Verfahren gegen den
 ### Fixpunkt konvergiert.
