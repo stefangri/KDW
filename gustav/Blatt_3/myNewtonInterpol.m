@@ -6,5 +6,6 @@ function [c] = myNewtonInterpol(x, f)
       c(k, l) = ( c(k + 1, l - 1) - c(k, l - 1) ) / (x(k + l-1) - x(k)  );
     end
   end
+  c
   c = c(1,:);
 end
